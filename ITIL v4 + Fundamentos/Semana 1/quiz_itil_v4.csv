@@ -1,0 +1,41 @@
+﻿Número,Pregunta,Respuesta
+1,¿De qué manera el involucramiento del cliente contribuye a la práctica de gestión de niveles de servicio?,1. Registra información en la que se pueden basar las métricas; 4. Sirve para fundamentar las conversaciones sobre los avances
+2,¿En qué se deberían basar todas las decisiones de mejora continua?,Datos analizados de manera precisa y cuidadosa
+3,¿Qué consideraciones influyen en la estrategia de una organización con respecto a los proveedores?,Cultura corporativa de la organización
+4,¿Qué práctica puede implicar poner en marcha la recuperación ante desastres?,Gestión de incidentes
+5,¿Qué tipo de cambio tiene MÁS probabilidades de gestionarse mediante la práctica de gestión de solicitudes de servicio?,Un cambio estándar
+6,Un error conocido es un problema que se ha [?] y no se ha resuelto.,analizado
+7,¿Qué afirmación acerca de los errores conocidos y los problemas es correcta?,"""Error conocido"" es el estado asignado a un problema después de que se ha analizado."
+8,"¿Qué principio guía describe la importancia de iniciar una acción, en lugar de invertir mucho tiempo analizando diferentes opciones?",Progresar iterativamente con retroalimentación
+9,¿Qué práctica asegura la disponibilidad de información precisa y confiable sobre los elementos de configuración y las relaciones entre ellos?,Gestión de la configuración de servicios
+10,Un cliente es una persona que define los requerimientos de un servicio y que es responsable de [?] del consumo de servicios.,los resultados
+11,¿Qué principio guía hace énfasis en la necesidad de comprender el flujo de trabajo en progreso e identificar cuellos de botella y pérdidas?,Colaborar y promover la visibilidad
+12,¿De qué manera las actividades de la cadena de valor transforman entradas en salidas?,A través de una combinación de prácticas
+13,¿De qué depende la práctica de gestión de solicitudes de servicio para alcanzar la máxima eficiencia?,Procesos y procedimientos
+14,¿Qué debería hacer una organización para incluir a los proveedores externos en la mejora?,Asegurar que los proveedores proporcionen información específica de su enfoque de mejora de los servicios en los contratos
+15,¿Qué afirmación acerca de la autorización de cambios es correcta?,Se debería asignar una autoridad de cambios para cada tipo de cambio y modelo de cambios.
+16,¿Cuál de las actividades que realizan el proveedor de servicios y el consumidor del servicio asegura la creación conjunta y continua de valor?,Gestión de relaciones de servicio
+17,¿Cuál es el punto de partida para la optimización?,Comprender la visión y los objetivos de la organización
+18,¿Cuál es la razón para usar un conjunto equilibrado de métricas de servicio?,Permite tener una visión de los servicios basada en los resultados
+19,¿Qué práctica proporciona visibilidad de los servicios de la organización mediante el registro y la generación de informes del desempeño de los servicios?,Gestión de niveles de servicio
+20,"¿Qué práctica proporciona respaldo para gestionar retroalimentación, felicitaciones y quejas?",Gestión de solicitudes de servicio
+21,¿Qué efecto tiene aumentar la automatización en la práctica de mesa de servicios?,Mayor capacidad para enfocarse en la experiencia del cliente cuando el contacto personal sea necesario
+22,¿Qué es una salida?,Algo que se crea al realizar una actividad
+23,¿Por qué el personal de la mesa de servicios debería detectar problemáticas recurrentes?,Para ayudar a identificar problemas
+24,"¿Qué dimensión de la gestión de servicios tiene en cuenta el gobierno, la gestión y la comunicación?",Organizaciones y personas
+25,¿Cuál ejemplifica mejor un cambio de emergencia?,La implementación de un parche de seguridad en una aplicación de software crítica
+26,¿Cuál es un medio para posibilitar la creación conjunta de valor al facilitar los resultados que el cliente desea obtener?,Un servicio
+27,¿Cuál es el propósito de la práctica de gestión de relaciones?,Establecer y promover vínculos entre la organización y otras partes interesadas en niveles tácticos y estratégicos
+28,¿Qué actividad de la cadena valor comunica el estado actual de las cuatro dimensiones de la gestión de servicios?,Planear
+29,¿Qué afirmación acerca de la práctica de mesa de servicios es CORRECTA?,Requiere una comprensión práctica de los procesos del negocio
+30,"¿Qué práctica tiene un propósito que incluye ayudar a la organización a maximizar el valor, controlar los costos y gestionar riesgos?",Gestión de activos de TI
+31,¿Por qué se deberían priorizar los incidentes?,Para asegurar que se resuelvan primero los incidentes de alto impacto para el negocio
+32,¿Qué principio guía está relacionado PRINCIPALMENTE con los ingresos y el crecimiento del cliente?,Enfocarse en el valor
+33,¿Qué práctica tiene un propósito que incluye restaurar la operación normal del servicio lo más rápidamente posible?,Gestión de incidentes
+34,¿Qué principio guía recomienda evaluar el estado actual y decidir qué se puede reutilizar?,Comenzar donde esté
+35,¿Qué debería hacerse con cada problema?,Definir su prioridad con base en su impacto potencial y probabilidad
+36,¿Qué es un problema?,Causa o causa potencial de uno o más incidentes
+37,¿Qué ayuda a una organización a adoptar y adaptar ITIL?,Los principios guía
+38,"Identifique las palabras faltantes. El propósito de [?] es asegurar que la organización y las partes interesadas creen valor de forma conjunta y continua, según los objetivos de la organización.",el sistema de valor del servicio
+39,¿Qué término describe la funcionalidad ofrecida por un servicio?,Utilidad
+40,¿Cuál es el propósito de la práctica de monitoreo y gestión de eventos?,"Observar sistemáticamente servicios y componentes, registrar e informar cambios de estado"

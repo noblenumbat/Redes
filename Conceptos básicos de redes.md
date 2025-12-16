@@ -42,4 +42,112 @@ Un estándar de Internet es el resultado final de un ciclo completo de discusió
 
 ¿Cuál es la cantidad de datos y a qué velocidad deben transmitirse?
 
-¿Cuál es el costo del medio y de la instalación?
+¿Cuál es el costo del medio y de la instalación
+
+## Tabla de direcciones MAC
+
+Cuando un host envia un frame a otro host, el switch  registra en su tabla la dirección MAC  de origen y su puerto fisico en el switch. Luego hace una comprobación iterativa puerto por puerto del hasta que coincida con la dirección MAC de destino. 
+
+Caso 1: el host en conectado en el puerto 1 quiere enviar un paquete al host conectaddo en el puerto 4 del switch.
+Lo que sucede es que en la tabla de direcciones se registra cada comprobación hasta llegar al puerto 4 donde esta conectado el host y solo en ese momento envia el paquete. La comprobación o comparación en la tabla de direcciones debe hacer 3 iteraciones hasta llegar el puerto 4 donde se encuentra la MAC de destino.
+
+![Tabla-direcciones-mac-caso1](/Conceptos%20básicos%20de%20redes/Imagenes/Mac%20Address%20Table.png)
+
+Caso 2: un host conectado en el puerto 4  quiere enviar un paquete al host conectado en el puerto 1, el switch verifica el primer puerto y envia el paquete. La comprobación o comparación en la tabla de direcciones tiene solo una iteración.
+
+![Tabla-direcciones-mac-caso2](/Conceptos%20básicos%20de%20redes/Imagenes/Mac%20Address%20Table1.png)
+
+Caso 3 (Ya te conozco): se repite el caso 1, pero como en la tabla de direcciones ya hay un registro de un host con una MAC especifica en el puerto 4, el switch envia directamente el paquete sin realizar las comprobaciones en los puerto 2 y 3.
+
+![Tabla-direcciones-mac-caso3](/Conceptos%20básicos%20de%20redes/Imagenes/Mac%20Address%20Table2.png)
+
+
+**1. Concentrador (Hub)**
+
+Nivel: Capa 1 (Física).
+
+Función: Repite todo lo que recibe a todos los puertos.
+
+Desventaja: Genera mucho tráfico innecesario; no es seguro ni eficiente.
+
+Solo es posible enviar un mensaje a la vez en un concentrador Ethernet. Dos o más mensajes enviados al mismo tiempo provocarán una colisión. Como el exceso de retransmisiones puede congestionar la red y reducir la velocidad del tráfico de red, ahora los concentradores se consideran obsoletos y fueron reemplazados por conmutadores Ethernet.
+
+A diferencia de un concentrador un switch o conmutador de red envia los datos solo al puerto donde está el destino, gracias a la tabla MAC.
+
+**2. Conmutador (Switch)**
+
+Nivel: Capa 2 (Enlace de datos).
+
+Función: Envía los datos solo al puerto donde está el destino, gracias a la tabla MAC.
+
+Ventaja: Eficiente, seguro y rápido.
+
+Nota: Cuando se habla de “conmutador de red”, normalmente se refiere a un switch. Son lo mismo.
+
+
+## Modelo OSI y TPC/IP
+
+Permite dividir el capas todo el proceso para poner analizarlo, tambien permite a los fabricantes desarrollar nuevas tecnologia de forma estándar y compatible.
+
+Los procesos que se originan en el dispositivo de origen son de salida y se originan en el dispotivo de destino son los procesos de entrada.
+
+### Modelo OSI (Open Systems Inteconnection)
+Creado en el 1980 tiene una arquitectura de 7 capas.
+```
+7. Aplicación
+6. Presentación
+5. Sesión
+4. Transporte
+3. Red
+2. Enlace datos
+1. Física
+```
+
+Al enviar un mensaje este debe atravesar las capas de salida del dispositivo de origen, luego viajar a través de un medio físico de transmisión y por último atravesar las capas de entrada en el dispositivo de destino hasta que el mensaje es entregado.
+
+El Modelo OSI (7 Capas) es el pilar fundamental para entender la arquitectura de las comunicaciones de red, describiendo el flujo de datos desde un origen hasta un destino.
+Este modelo está compuesto por siete capas, cada una con responsabilidades específicas en la comunicación. Por ejemplo, en las Capas de Salida (Outbound), la Capa de Transporte (Capa 4) divide los datos en segmentos más pequeños para su envío. Más abajo, la Capa de Red (Capa 3) encapsula esos segmentos en paquetes y define la ruta que deben seguir.
+En las capas superiores, la Capa de Sesión (Capa 5) se encarga de gestionar el control, la creación y el formato del mensaje. Finalmente, en el nivel más bajo, la Capa Física (Capa 1) codifica los bits para que puedan transmitirse a través del medio físico.
+Dominar las funciones de estas 7 capas es esencial para cualquier profesional de redes, ya que permite comprender cómo los datos son procesados y reensamblados al llegar a la aplicación de destino
+
+![Modelo-OSI](/Conceptos%20básicos%20de%20redes/Imagenes/MODELO%20OSI.png)
+
+>[!Note]
+>
+>Los terminos segmentos, paquetes, tramas, bits, se refiere a la unidad de datos sobre la cual cada capa ejecuta su proceso.
+>
+>¿Cuántos datos se pueden encapsular en una trama de Ethernet de tamaño normal antes de que se envíen a través de la red?
+>
+>46 a 1500 bytes
+
+### Modelo TCP/IP (Transmisión Control Protocol & Internet Protocol)
+Creado en la decada de 1970 tiene una arquitectura de 4 capas.
+
+El Modelo TCP/IP (4 Capas) es el estándar que impulsa la comunicación en internet, definiendo cómo los datos viajan desde el origen hasta el destino.
+Este modelo de cuatro capas simplifica la arquitectura de red. La Capa de Aplicación (Capa 4) gestiona la comunicación de las apps y utiliza protocolos clave como HTTP, FTP, SMTP y DNS.
+Justo debajo, la Capa de Transporte (Capa 3) se encarga de la entrega del mensaje y reensambla los segmentos, determinando si la entrega debe ser confiable o no (TCP/UDP). Por su parte, la Capa de Internet (Capa 2) se focaliza en el routing, gestionando la comunicación y el enrutamiento basándose en la IP de origen y destino.
+Comprender estas cuatro capas es fundamental para cualquier profesional de TI que desee dominar la forma en que los datos son transmitidos en la red física.
+
+![Modelo-TCPCIP](/Conceptos%20básicos%20de%20redes/Imagenes/MODELO-TCPIP.png)
+
+### Comparación modelo OSI vs modelo TCP/IP
+![Comparacion-OSI-TCPIP](/Conceptos%20básicos%20de%20redes/Imagenes/MODELO%20OSI%20&%20TCPIP.png)
+
+## TABLA DE DIRECCIONES MAC
+
+¿Te has preguntado cómo un Switch gestiona el tráfico de red de manera eficiente, evitando la congestión? La clave está en la Tabla de Direcciones MAC (a veces llamada tabla CAM).
+Un Switch Ethernet de capa 2 toma sus decisiones de reenvío basándose únicamente en las direcciones MAC de Capa 2, sin tener conocimiento del paquete o protocolo que se transporta en la trama.
+Descubre cómo un Switch construye esta tabla de manera dinámica.
+1. Aprendizaje (Learning): El Switch examina la dirección MAC de origen de las tramas entrantes, asociándola al número de puerto por donde ingresó.
+2. Reenvío (Forwarding): El Switch busca la dirección MAC de destino en su tabla. Si la encuentra, reenvía la trama al puerto específico; si no la encuentra, se inunda (unidifusión desconocida) a todos los puertos, excepto el de entrada.
+
+![Tabla-direcciones-mac](/Conceptos%20básicos%20de%20redes/Imagenes/Tabla%20de%20direcciones.png)
+
+## TRAMA ETHERNET
+
+La Trama Ethernet es fundamental en las redes, actuando como la unidad de datos en la Capa de Enlace de Datos (Capa 2) del Modelo OSI,.
+Su función principal es encapsular los paquetes de la Capa de Red (Capa 3) y prepararlos para su transmisión a través de la Capa Física,. Un dato clave sobre su capacidad es que una trama de ethernet de tamaño normal puede enviar entre 46 y 1500 bytes de datos,,.
+En la práctica, los switches Ethernet de capa 2 utilizan las direcciones MAC que se encuentran en la trama para tomar decisiones de reenvío (o descarte). El switch aprende dinámicamente al examinar la dirección MAC de origen de las tramas que recibe en un puerto,. Esta inteligencia es lo que permite al switch reenviar la trama al puerto correcto, o a todos los puertos (excepto el entrante) si la dirección MAC de destino no está aún en su tabla,.
+Dominar la estructura y el comportamiento de las tramas es esencial para entender el funcionamiento de la red local.
+
+![Trama](/Conceptos%20básicos%20de%20redes/Imagenes/Trama-ethernet.png)
